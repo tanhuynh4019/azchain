@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    color: #020202;
+}
+
+/* container css */
+.wrapper {
+    background: #f5f5f5;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 375px;
+    height: 100%;
+    margin: auto;
+    background: white;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    background: #131321;
+    height: 45px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+}
+.header__menu {
+    padding: 6px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.body {
+    min-height: calc(100% - 45px - 75px);
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+    height: 75px;
+    background: #f7f9fb;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.footer__item--image {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__item--image.primary {
+    background: linear-gradient(to bottom, #626262, #131321);
+    box-shadow: 0 0 2px 1px #1264ff;
+}
+.footer__item--text {
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 10px;
+}
+.footer__item--text.primary {
+    padding: 2px 20px;
+    background: #1264ff;
+    color: white;
+}
+/* container css end */
+
+/* home css */
+.home-container {
+    padding: 10px;
+}
+.home-banner {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.home-block {
+    flex: 1;
+    background: #f7f9fb;
+    border-radius: 10px;
+    padding: 12px;
+}
+.home-block p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+.home-block-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-balance-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.home-balance-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+.home-balance-select {
+    padding: 6px 12px;
+    border: 1px solid #071b60;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.home-block-bottom {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+/* home end css */
