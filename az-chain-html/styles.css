@@ -7,13 +7,19 @@
 html {
     font-size: 12px;
     color: #020202;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    border: none;
+    cursor: pointer;
 }
 
 /* container css */
 .wrapper {
     background: #f5f5f5;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
@@ -27,7 +33,9 @@ html {
     position: sticky;
     top: 0;
     left: 0;
-
+    z-index: 2;
+}
+.header-main {
     background: #131321;
     height: 45px;
     padding: 0 12px;
@@ -35,6 +43,33 @@ html {
     align-items: center;
     justify-content: space-between;
     border-radius: 0 0 10px 10px;
+}
+.header-popup {
+    position: relative;
+    background: #f7f9fb;
+    height: 45px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-popup img {
+    cursor: pointer;
+}
+.header-popup .title {
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-popup__right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    cursor: pointer;
 }
 .header__menu {
     padding: 6px;
@@ -47,13 +82,19 @@ html {
 }
 
 .body {
-    min-height: calc(100% - 45px - 75px);
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 45px - 75px);
+}
+.body-padding {
+    padding: 10px;
 }
 
 .footer {
     position: sticky;
     bottom: 0;
     left: 0;
+    z-index: 2;
 
     height: 75px;
     background: #f7f9fb;
@@ -145,3 +186,476 @@ html {
     margin-top: 20px;
 }
 /* home end css */
+
+/* NFT Marketplace */
+.nft-page-container {
+    padding: 10px;
+}
+.nft-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px;
+}
+.nft-card {
+    width: 168px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nft-card-image {
+    aspect-ratio: 168 / 260;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.nft-card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.nft-card-row b {
+    font-size: 14px;
+}
+.nft-card-button {
+    background: #0057ff;
+    color: white;
+    padding: 4px;
+    border-radius: 15px;
+}
+
+.nft-description {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.nft-description__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nft-box-wrapper {
+    margin-top: 30px;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+}
+.nft-box-container {
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+.nft-box-container:last-child {
+    border-bottom: 0;
+}
+.nft-box-container.box-column > div {
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f3f8;
+}
+.nft-box-container.box-column > div:last-child {
+    border-bottom: 0;
+}
+.nft-box-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nft-box-item .nft-box-item__left {
+    flex: 0 0 15px;
+}
+.nft-box-item .nft-box-item__center {
+    flex: 1;
+}
+.nft-box-item .nft-box-item__right {
+    white-space: nowrap;
+}
+.nft-box-item .title {
+    font-size: 14px;
+    font-weight: bold;
+}
+.nft-dotted-icon {
+    background: #0057ff;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+.nft-dash-icon {
+    width: 14px;
+    height: 3px;
+    background: black;
+}
+.nft-information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nft-information > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.nft-information > div > span:nth-child(2) {
+    font-weight: bold;
+}
+
+.broker-image {
+    aspect-ratio: 167 / 114;
+    object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f7f9fb;
+}
+/* NFT Marketplace end */
+
+/* Dashboard */
+.table-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.table-container {
+    border-radius: 10px;
+    border: 1px solid #dadada;
+    padding: 8px;
+}
+.table-container table {
+    width: 100%;
+    border-spacing: 0; /* Removes gaps between cells */
+    text-align: left;
+}
+.table-container th {
+    font-weight: 500;
+    padding: 0 8px 8px 8px;
+}
+.table-container td {
+    padding: 8px;
+    border-top: 1px solid #f1f3f8;
+}
+.table-container tr:last-child > td {
+    padding: 8px 8px 0 8px;
+}
+.table-container [data-label='Date'] {
+    white-space: nowrap;
+}
+/* Dashboard end */
+
+/* Mining */
+.mining-theme-container {
+    height: 290px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.mining-content {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    margin: 10px 20px 0 20px;
+    color: white;
+
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+.mining-content__token {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.mining-content__token img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.mining-theme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.mining-card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    width: 100%;
+}
+.mining-card {
+    position: absolute;
+    bottom: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    aspect-ratio: 168 / 260;
+    width: 80px;
+}
+.mining-balance-text {
+    color: #848484;
+    margin-bottom: 10px;
+}
+.mining-balance-number {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.mining-balance-number img {
+    width: 21px;
+}
+.mining-capacity {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.mining-capacity > h5 {
+    font-size: 16px;
+    text-align: center;
+    color: #848484;
+    font-weight: normal;
+}
+.mining-capacity > span {
+    color: #848484;
+}
+.mining-capacity > p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.mining-capacity > p img {
+    cursor: pointer;
+    margin-left: 20px;
+}
+.mining-capacity > p span {
+    font-size: 14px;
+    font-weight: 600;
+}
+.mining-capacity-bar {
+    position: relative;
+    width: 100%;
+    height: 14px;
+    background: #e1ecf4;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.mining-capacity-bar-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #ea4555, #fcbf0d);
+
+    width: 50%;
+    height: 14px;
+    border-radius: 14px;
+}
+.mining-button {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    background: #0057ff;
+    color: white;
+}
+.mining-button:disabled {
+    opacity: 0.5;
+}
+/* Mining end */
+
+/* Mission */
+.mission-banner {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.mission-banner p {
+    font-size: 20px;
+    font-weight: bold;
+}
+.mission-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+.mission-block-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mission-block {
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    background: #f7f9fb;
+    border-radius: 10px;
+}
+.mission-block__image {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    background: #efeef2;
+    border-radius: 6px;
+}
+.mission-block__image img {
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    object-fit: none;
+}
+.mission-block__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+.mission-block__content > span {
+    font-size: 10px;
+}
+.mission-block__content > p {
+    font-size: 13px;
+    font-weight: bold;
+}
+.mission-block__content--row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.mission-block__content--row img {
+    width: 15px;
+}
+.mission-button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #232531;
+    color: white;
+}
+/* Mission end */
+
+/* Referral */
+.referral-block {
+    padding: 10px;
+    background: #f7f9fb;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.referral-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.referral-button {
+    padding: 8px 18px;
+    background: white;
+    border: 1px solid #43494f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+.referral-button.primary {
+    background: #1264ff;
+    border-color: #1264ff;
+    color: white;
+}
+.referral-title {
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.referral-description {
+    font-size: 11px;
+    color: #848484;
+}
+.referral-search-box {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    padding: 0 8px;
+    margin-top: 8px;
+    height: 30px;
+
+    display: flex;
+    gap: 10px;
+}
+.referral-search-box img {
+    width: 15px;
+}
+.referral-search-box input {
+    outline: none;
+    border: none;
+    font-size: 10px;
+}
+.referral-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.referral-menu__item {
+    height: 30px;
+    min-width: 60px;
+    padding: 0 8px;
+    border-radius: 5px;
+    background: #dfdfdf;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-weight: 600;
+}
+.referral-menu__item.active {
+    background: #1264ff;
+    color: white;
+}
+.referral-menu__item.active svg path {
+    fill: white;
+}
+.referral-info-wrapper {
+    background: #f7f9fb;
+    padding: 10px;
+    border-radius: 10px;
+}
+.referral-info-container {
+    border-bottom: 1px solid #bbc9d7;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 10px;
+}
+.referral-info-container:first-child {
+    padding: 0 0 10px 0;
+}
+.referral-info-container:last-child {
+    padding: 10px 0 0 0;
+    border-bottom: none;
+}
+.referral-info-container > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+/* Referral end */

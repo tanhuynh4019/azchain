@@ -56,9 +56,7 @@ const HeaderContainer = () => {
 
                 <Header.Right>
                     <Button>{t('JOIN NOW')}</Button>
-                    <Header.Language
-                        href={language === 'en' ? '/trang-chu' : '/home'}
-                    >
+                    <Header.Language href={language === 'en' ? '/' : '/home'}>
                         <img src='/images/language.png' />
                         {language}
                     </Header.Language>
