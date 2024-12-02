@@ -18,7 +18,7 @@ export const ButtonContainer = styled.button`
         size === 'lg' &&
         css`
             height: 70px;
-            padding: 0 25px;
+            padding: 0 35px;
             font-size: 32px;
             border-radius: 35px;
         `}
@@ -26,5 +26,12 @@ export const ButtonContainer = styled.button`
         outline === 'gradient' &&
         css`
             background: linear-gradient(to right, #eb6168, #fcbf0d);
+        `}
+    ${({ outline }) =>
+        outline === 'white' &&
+        css`
+            background: white;
+            border: 1px solid #9bb7d6;
+            color: #1264ff;
         `}
 `

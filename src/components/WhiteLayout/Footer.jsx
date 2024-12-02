@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer } from './MainLayout.styled'
+import { Footer } from './WhiteLayout.styled'
 import Container from '../Container'
 import FacebookIcon from '@/images/FacebookIcon'
 import InstagramIcon from '@/images/InstagramIcon'
@@ -14,17 +14,17 @@ const FooterContainer = () => {
         <Footer.Container>
             <Container>
                 <Footer.Top>
-                    <img src='/images/logo.png' />
+                    <img src='/images/logo-dark.png' />
 
                     <span>
                         © 2024 <b>AZChain</b> All rights reserved.
                     </span>
 
                     <Footer.SocialList>
-                        <FacebookIcon />
-                        <InstagramIcon />
-                        <TwitterIcon />
-                        <YoutubeIcon />
+                        <FacebookIcon color='#171717' />
+                        <InstagramIcon color='#171717' />
+                        <TwitterIcon color='#171717' />
+                        <YoutubeIcon color='#171717' />
                     </Footer.SocialList>
                 </Footer.Top>
 

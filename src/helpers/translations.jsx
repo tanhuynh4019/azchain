@@ -4,7 +4,8 @@ const translation = {
     Ecosystem: 'Hệ sinh thái',
     Roadmap: 'Lộ trình',
     Contract: 'Hợp đồng',
-    'Multi-chain - Multi-services': 'Đa Chain - Đa Dịch Vụ',
+    Collection: 'Bộ sưu tập',
+    'Multi Chain - Multi Services': 'Đa Chain - Đa Dịch Vụ',
     'Secure DeFi Infrastructure': 'Cơ sở hạ tầng DeFi an toàn',
     'JOIN NOW': 'THAM GIA NGAY',
     'WHITE PAGE': 'TRANG TRẮNG',
@@ -89,7 +90,53 @@ const translation = {
     'Buy now': 'Mua ngay',
     FAQ: 'Câu hỏi thường gặp',
     Media: 'Truyền thông',
-    Disclaimers: 'Khuyến cáo'
+    Disclaimers: 'Khuyến cáo',
+
+    // white home
+    'Join the revolution with': 'Tham gia cuộc cách mạng cùng',
+    'Shareholders NFT': 'NFT Cổ Phần Hoá',
+    Introduction: 'GIỚI THIỆU',
+    'AZCHAIN NFT': 'NFT AZCHAIN',
+    'We are excited to present the AZChain NFT collection, where the NFT Shareholders play a pivotal role in the foundation of our entire ecosystem.':
+        'Chúng tôi xin giới thiệu đến bạn Bộ sưu tập NFT, NFT Cổ Phần của AZChain đóng vai trò chính của toàn bộ Hệ sinh thái.',
+    'Safety - Security - Transparency': 'An toàn - Bảo mật - Minh Bạch',
+    reviews: 'đánh giá',
+    users: 'người dùng',
+    'rate NFTs': 'tỉ lệ NFTs',
+    'Explore the brilliant minds behind NFT AZChain and how they have transformed the AZChain ecosystem, seamlessly combining innovation with sustainable and engaging investment opportunities.':
+        'Tìm hiểu về những bộ óc sáng tạo đã đưa NFT azchain và thế giới của  nền tảng AZChains trở nên nhẹ nhàng hơn, kết hợp giữa sự đổi mới với yếu tố đầu tư bền vững và thú vị.',
+    'NFT Collection': 'Bộ Sưu Tập NFT',
+    'Showcasing all collections on the Blockchain with continuous analysis.':
+        'NFT Hiển thị tất cả các bộ sưu tập trên Blockchain, Phân tích liên tục',
+    'Address Profile': 'Hồ sơ địa chỉ',
+    'Easily access and view personal NFT data on-chain through convenient lookups.':
+        'Xem dữ liệu NFT cá nhân trên chuỗi thông qua việc tra cứu dễ dàng',
+    'Initial Launch': 'Ra mắt ban đầu',
+    'Established presence on social media platforms (Discord, Telegram, X...).':
+        'Sự hiện diện trên phương tiện truyền thông xã hội đã được thiết lập (Discord, Telegram, X...)',
+    'Xác minh hợp đồng': 'Phát triển thị trường NFT',
+    'Ongoing development and expansion of the NFT marketplace.':
+        'Phát triển thị trường NFT',
+    'Follow our roadmap to discover what lies ahead in the AZChain NFT collection.':
+        '',
+    STAGE: 'GIAI ĐOẠN',
+    'We are releasing a limited edition of Shareholder NFTs, exclusively for angel investors, offering unique rights and attractive benefits.':
+        'Chúng tôi phát hành NFT Cổ đông giới hạn, dành cho những nhà đầu tư thiên thần, với những quyền lợi và lợi ích hấp dẫn.',
+    FAQs: 'NHỮNG CÂU HỎI THƯỜNG GẶP',
+    'What is AZChain NFT?': 'AZChain NFT là gì?',
+    'AZChain NFT is a unique digital asset that represents ownership of tokenized real-world assets or access to exclusive features within the AZChain ecosystem.':
+        'AZChain NFT là một tài sản số độc đáo, đại diện cho quyền sở hữu tài sản thực được mã hóa hoặc quyền truy cập vào các tính năng độc quyền trong hệ sinh thái AZChain.',
+    'How to join AZChain NFT?': 'Làm thế nào để tham gia AZChain NFT?',
+    'To join AZChain NFT, you need to create an AZChain wallet, purchase AZC tokens, and use them to acquire the desired NFTs through the AZChain marketplace.':
+        'Để tham gia AZChain NFT, bạn cần tạo ví AZChain, mua token AZC và sử dụng chúng để mua NFT mong muốn thông qua sàn giao dịch của AZChain.',
+    'What are the benefits of owning AZChain NFT?':
+        'Lợi ích của việc sở hữu AZChain NFT là gì?',
+    'Owning AZChain NFTs provides access to exclusive features, secure investments in tokenized assets, and opportunities for passive income through staking and rewards.':
+        'Sở hữu AZChain NFT mang lại quyền truy cập vào các tính năng độc quyền, đầu tư an toàn vào tài sản được mã hóa, và cơ hội thu nhập thụ động thông qua staking và nhận thưởng.',
+    'Is AZChain transparent and secure?':
+        'AZChain có minh bạch và an toàn không?',
+    'Yes, AZChain prioritizes transparency and security through advanced blockchain technology, encrypted transactions, and regular audits by leading security firms.':
+        'Có, AZChain ưu tiên tính minh bạch và an toàn thông qua công nghệ blockchain tiên tiến, giao dịch được mã hóa và các cuộc kiểm toán định kỳ bởi các công ty bảo mật hàng đầu.'
 }
 
 export default translation

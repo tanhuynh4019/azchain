@@ -6,9 +6,8 @@ export const Header = {
         position: sticky;
         top: 0;
         left: 0;
-        background: black;
-        color: white;
         z-index: 100;
+        background: white;
 
         > div {
             height: 70px;
@@ -24,10 +23,10 @@ export const Header = {
     Center: styled.div`
         display: flex;
         align-items: center;
-        background: #131321;
+        background: white;
         padding: 8px 20px;
         border-radius: 20px;
-        border: 1px solid #1264ff;
+        border: 1px solid #9bb7d6;
     `,
     CenterItem: styled.div`
         font-weight: 500;
@@ -51,10 +50,8 @@ export const Header = {
 
 export const Footer = {
     Container: styled.div`
-        background: #131321;
-        color: #dadada;
+        background: white;
         font-size: 12px;
-        border-top: 1px solid #232531;
     `,
     Top: styled.div`
         display: flex;
@@ -89,6 +86,7 @@ export const Footer = {
 }
 
 export const Responsive = styled.div`
+    color: #131321;
     @media (max-width: 1200px) {
         ${Header.CenterItem} {
             padding: 0 10px;

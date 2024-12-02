@@ -46,7 +46,7 @@ const DarkHome = () => {
                     <Banner.Left>
                         <Banner.Title>{t('AZChain')}</Banner.Title>
                         <Banner.SmallTitle>
-                            {t('Multi-chain - Multi-services')}
+                            {t('Multi Chain - Multi Services')}
                         </Banner.SmallTitle>
                         <Banner.Description>
                             {t('Secure DeFi Infrastructure')}
@@ -215,10 +215,6 @@ const DarkHome = () => {
                             <Token.InfoItem>
                                 <span>{t('Token type')}</span>
                                 <span>{t('Practicality')}</span>
-                            </Token.InfoItem>
-                            <Token.InfoItem>
-                                <span>{t('Smart contract')}</span>
-                                <span>0ccc0223e4673f88</span>
                             </Token.InfoItem>
                         </Token.InfoContainer>
                     </Token.Left>

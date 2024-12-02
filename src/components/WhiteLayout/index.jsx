@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import { Responsive } from './MainLayout.styled'
+import { Responsive } from './WhiteLayout.styled'
 import GlobalProvider from '@/context/GlobalContext'
 
-const MainLayout = ({ children, language }) => {
+const WhiteLayout = ({ children, language }) => {
     return (
         <GlobalProvider language={language}>
             <Responsive>
@@ -16,4 +16,4 @@ const MainLayout = ({ children, language }) => {
     )
 }
 
-export default MainLayout
+export default WhiteLayout
