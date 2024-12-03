@@ -31,7 +31,7 @@ const DarkHome = () => {
     const swiperRef = useRef(null)
 
     const goToWhitePage = () => {
-        router.push('/nft' + language === 'vi' ? '?lang=vi' : '')
+        router.push('/nft' + (language === 'vi' ? '?lang=vi' : ''));
     }
 
     useEffect(() => {

@@ -18,7 +18,7 @@ const translation = {
     'AZChain provides data encryption mechanisms and two-factor authentication to ensure your assets are safely protected from risks of loss or unauthorized access.':
         'AZChain cung cấp cơ chế mã hóa dữ liệu và xác thực hai yếu tố để đảm bảo tài sản của bạn được bảo vệ an toàn khỏi nguy cơ mất mát hoặc truy cập trái phép.',
     'Easy to use': 'Dễ sử dụng',
-    'AZChain offers a simple and user-friendly interface, allowing users to easily manage and trade cryptocurrencies conveniently and quickly.':
+    'AZChain offers a simple and user-friendly interface, allowing useTerms of Servicers to easily manage and trade cryptocurrencies conveniently and quickly.':
         'AZChain cung cấp giao diện đơn giản và thân thiện với người dùng, cho phép người dùng dễ dàng quản lý và giao dịch tiền điện tử một cách thuận tiện và nhanh chóng.',
     'Versatile and convenient': 'Đa năng và tiện lợi',
     'AZChain allows users to store and manage multiple cryptocurrencies across various networks on a single platform.':
@@ -146,7 +146,15 @@ const translation = {
     'Is AZChain transparent and secure?':
         'AZChain có minh bạch và an toàn không?',
     'Yes, AZChain prioritizes transparency and security through advanced blockchain technology, encrypted transactions, and regular audits by leading security firms.':
-        'Có, AZChain ưu tiên tính minh bạch và an toàn thông qua công nghệ blockchain tiên tiến, giao dịch được mã hóa và các cuộc kiểm toán định kỳ bởi các công ty bảo mật hàng đầu.'
+        'Có, AZChain ưu tiên tính minh bạch và an toàn thông qua công nghệ blockchain tiên tiến, giao dịch được mã hóa và các cuộc kiểm toán định kỳ bởi các công ty bảo mật hàng đầu.',
+    'Terms of Service':
+        'Điều khoản dịch vụ',
+    'Privacy Policy':
+        'Chính sách bảo mật',
+    'Disclaimer':
+        'Tuyên bố miễn trừ trách nhiệm',
+    'Support Center':
+        'Trung tâm hỗ trợ'
 }
 
 export default translation

@@ -21,18 +21,21 @@ const FooterContainer = () => {
                     </span>
 
                     <Footer.SocialList>
-                        <FacebookIcon />
+                        {/* <FacebookIcon />
                         <InstagramIcon />
-                        <TwitterIcon />
-                        <YoutubeIcon />
+                        <TwitterIcon /> */}
+                        <a href="https://www.youtube.com/@azchain" target="_blank" rel="noopener noreferrer">
+                            <YoutubeIcon />
+                        </a>
                     </Footer.SocialList>
                 </Footer.Top>
 
                 <Footer.Menu>
-                    <a>{t('Buy now')}</a>
-                    <a>{t('FAQ')}</a>
-                    <a>{t('Media')}</a>
-                    <a>{t('Disclaimers')}</a>
+                    <a href='https://nft.azchain.app/'>{t('Buy now')}</a>
+                    <a href='https://docs.google.com/document/d/1YQ1r9YNSIUXYsjDXRheI6m0DQqgpQTy07YGmbL3KOcg/edit?usp=sharing'>{t('Terms of Service')}</a>
+                    <a href='https://docs.google.com/document/d/1YQ1r9YNSIUXYsjDXRheI6m0DQqgpQTy07YGmbL3KOcg/edit?usp=sharing'>{t('Privacy Policy')}</a>
+                    <a>{t('Disclaimer')}</a>
+                    <a href='https://docs.google.com/document/d/1_u1vQCrpoyWpa8lLCUeW38Q1kv6ae1i4-hF5m4gageg/edit?usp=sharing'>{t('Support Center')}</a>
                 </Footer.Menu>
 
                 <Footer.Text>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Footer } from './WhiteLayout.styled'
 import Container from '../Container'
+import TelegramIcon from '@/images/TelegramIcon'
 import FacebookIcon from '@/images/FacebookIcon'
 import InstagramIcon from '@/images/InstagramIcon'
 import TwitterIcon from '@/images/TwitterIcon'
@@ -21,18 +22,23 @@ const FooterContainer = () => {
                     </span>
 
                     <Footer.SocialList>
-                        <FacebookIcon color='#171717' />
-                        <InstagramIcon color='#171717' />
-                        <TwitterIcon color='#171717' />
-                        <YoutubeIcon color='#171717' />
+                        {/* <FacebookIcon color='#171717' /> */}
+                        {/* <InstagramIcon color='#171717' /> */}
+                        {/* <TwitterIcon color='#171717' /> */}
+                        {/* <TelegramIcon color='#171717' /> */}
+
+                        <a href="https://www.youtube.com/@azchain" target="_blank" rel="noopener noreferrer">
+                            <YoutubeIcon color="#171717" />
+                        </a>
                     </Footer.SocialList>
                 </Footer.Top>
 
                 <Footer.Menu>
-                    <a>{t('Buy now')}</a>
-                    <a>{t('FAQ')}</a>
-                    <a>{t('Media')}</a>
-                    <a>{t('Disclaimers')}</a>
+                    <a href='https://nft.azchain.app/'>{t('Buy now')}</a>
+                    <a href='https://docs.google.com/document/d/1YQ1r9YNSIUXYsjDXRheI6m0DQqgpQTy07YGmbL3KOcg/edit?usp=sharing'>{t('Terms of Service')}</a>
+                    <a href='https://docs.google.com/document/d/1YQ1r9YNSIUXYsjDXRheI6m0DQqgpQTy07YGmbL3KOcg/edit?usp=sharing'>{t('Privacy Policy')}</a>
+                    <a>{t('Disclaimer')}</a>
+                    <a href='https://docs.google.com/document/d/1_u1vQCrpoyWpa8lLCUeW38Q1kv6ae1i4-hF5m4gageg/edit?usp=sharing'>{t('Support Center')}</a>
                 </Footer.Menu>
 
                 <Footer.Text>
