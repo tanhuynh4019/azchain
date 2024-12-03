@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { Navigation } from 'swiper/modules'
 
-import { About, Banner, Introduction, Responsive } from './WhiteHome.styled'
+import {
+    About,
+    Banner,
+    Collection,
+    FAQ,
+    Introduction,
+    Responsive,
+    Roadmap,
+    Title
+} from './WhiteHome.styled'
 import Container from '@/components/Container'
+import Button from '@/components/Button'
+import Question from './Question'
+import FacebookIcon from '@/images/FacebookIcon'
+import InstagramIcon from '@/images/InstagramIcon'
+import TwitterIcon from '@/images/TwitterIcon'
+import YoutubeIcon from '@/images/YoutubeIcon'
+import WhiteArrow from '@/images/WhiteArrow'
 
 import { useGlobalContext } from '@/context/GlobalContext'
-import Button from '@/components/Button'
 
 const WhiteHome = () => {
     const { t, isMobile } = useGlobalContext()
+    const prevButtonRef = useRef(null)
+    const nextButtonRef = useRef(null)
 
     const getImage = (imageName) => `./images/white_home/${imageName}.png`
+
+    const goToAzchain = () =>
+        (window.location.href = 'https://nft.azchain.app/')
 
     return (
         <Container>
@@ -44,6 +65,7 @@ const WhiteHome = () => {
                                 size='lg'
                                 outline='white'
                                 className='theme-button'
+                                onClick={goToAzchain}
                             >
                                 {t('JOIN NOW')}
                             </Button>
@@ -70,6 +92,7 @@ const WhiteHome = () => {
                                 size='lg'
                                 outline='white'
                                 className='theme-button'
+                                onClick={goToAzchain}
                             >
                                 {t('JOIN NOW')}
                             </Button>
@@ -85,7 +108,7 @@ const WhiteHome = () => {
                 )}
 
                 {!isMobile ? (
-                    <Introduction.Container>
+                    <Introduction.Container id='about-us'>
                         <Introduction.ImageBlock>
                             <img src={getImage('about-1')} />
                             <Introduction.ImageText>
@@ -120,7 +143,7 @@ const WhiteHome = () => {
                         </Introduction.ImageBlock>
                     </Introduction.Container>
                 ) : (
-                    <Introduction.Container>
+                    <Introduction.Container id='about-us'>
                         <Introduction.Content>
                             <h2>{t('Introduction')}</h2>
                             <h1>{t('AZCHAIN NFT')}</h1>
@@ -217,6 +240,173 @@ const WhiteHome = () => {
                         </About.ListBlock>
                     </About.Wrapper>
                 </About.Container>
+
+                <Roadmap.Container id='roadmap'>
+                    <Title style={{ maxWidth: 400 }}>
+                        {t('AZCHAIN NFT ROADMAP')} <div />
+                    </Title>
+
+                    <p>
+                        {t(
+                            'Follow our roadmap to discover what lies ahead in the AZChain NFT collection.'
+                        )}
+                    </p>
+
+                    <Roadmap.StepContainer>
+                        <Roadmap.Step>
+                            <div>
+                                <div>
+                                    {t('STAGE')} <div />
+                                </div>
+
+                                <span>01</span>
+                            </div>
+
+                            <p>
+                                {t(
+                                    'We are releasing a limited edition of Shareholder NFTs, exclusively for angel investors, offering unique rights and attractive benefits.'
+                                )}
+                            </p>
+                        </Roadmap.Step>
+                        <Roadmap.Step>
+                            <div>
+                                <div>
+                                    {t('STAGE')} <div />
+                                </div>
+
+                                <span>02</span>
+                            </div>
+
+                            <p>
+                                {t(
+                                    'We release NFTs for the ownership community, with a limited quantity.'
+                                )}
+                            </p>
+                        </Roadmap.Step>
+                    </Roadmap.StepContainer>
+                </Roadmap.Container>
+
+                <Collection.Container id='collection'>
+                    <Title>
+                        {t('Collection')} <div />
+                    </Title>
+
+                    <Collection.SlideShow
+                        slidesPerView={2}
+                        breakpoints={{
+                            992: {
+                                slidesPerView: 3
+                            },
+                            1300: {
+                                slidesPerView: 5
+                            }
+                        }}
+                        spaceBetween={20}
+                        centeredSlides={true}
+                        loop={true}
+                        modules={[Navigation]}
+                        navigation={{
+                            prevEl: prevButtonRef.current,
+                            nextEl: nextButtonRef.current
+                        }}
+                        onBeforeInit={(swiper) => {
+                            swiper.params.navigation.prevEl =
+                                prevButtonRef.current
+                            swiper.params.navigation.nextEl =
+                                nextButtonRef.current
+                        }}
+                    >
+                        {[...Array(9)].map((_, idx) => (
+                            <Collection.Slide>
+                                <img
+                                    src={getImage(
+                                        `collection-${(idx % 5) + 1}`
+                                    )}
+                                />
+                            </Collection.Slide>
+                        ))}
+                    </Collection.SlideShow>
+
+                    <Collection.Button size='lg' onClick={goToAzchain}>
+                        {t('JOIN NOW')}
+                    </Collection.Button>
+
+                    <Collection.Pagination>
+                        <button ref={prevButtonRef}>
+                            <WhiteArrow />
+                        </button>
+                        <button ref={nextButtonRef}>
+                            <WhiteArrow />
+                        </button>
+                    </Collection.Pagination>
+                </Collection.Container>
+
+                <FAQ.Container id='faq'>
+                    <Title>
+                        {t('FAQs')} <div />
+                    </Title>
+
+                    <FAQ.Wrapper>
+                        <div>
+                            <img src={getImage('question-1')} />
+                        </div>
+                        <div>
+                            <Question
+                                title={t('What is AZChain?')}
+                                description={t(
+                                    'AZChain is a specialized blockchain platform designed to enable the tokenization of real-world assets and facilitate transparent financial transactions. Combining advanced technology with the trends of the digital and green economy, AZChain offers secure and efficient solutions in fields such as Carbon Credits, e-commerce, real estate, GameFi, and more.'
+                                )}
+                            />
+                            <Question
+                                title={t('What is AZChain NFT?')}
+                                description={t(
+                                    'AZChain NFT is a unique digital asset that represents ownership of tokenized real-world assets or access to exclusive features within the AZChain ecosystem.'
+                                )}
+                            />
+                            <Question
+                                title={t('How to join AZChain NFT?')}
+                                description={t(
+                                    'To join AZChain NFT, you need to create an AZChain wallet, purchase AZC tokens, and use them to acquire the desired NFTs through the AZChain marketplace.'
+                                )}
+                            />
+                            <Question
+                                title={t(
+                                    'What are the benefits of owning AZChain NFT?'
+                                )}
+                                description={t(
+                                    'Owning AZChain NFTs provides access to exclusive features, secure investments in tokenized assets, and opportunities for passive income through staking and rewards.'
+                                )}
+                            />
+                            <Question
+                                title={t('Is AZChain transparent and secure?')}
+                                description={t(
+                                    'Yes, AZChain prioritizes transparency and security through advanced blockchain technology, encrypted transactions, and regular audits by leading security firms.'
+                                )}
+                            />
+                        </div>
+                    </FAQ.Wrapper>
+
+                    <img src={getImage('question-2')} />
+
+                    <FAQ.SocialList>
+                        <div>
+                            <FacebookIcon color='#171717' />
+                            <span>@azchain</span>
+                        </div>
+                        <div>
+                            <InstagramIcon color='#171717' />
+                            <span>@azchain</span>
+                        </div>
+                        <div>
+                            <TwitterIcon color='#171717' />
+                            <span>@azchain</span>
+                        </div>
+                        <div>
+                            <YoutubeIcon color='#171717' />
+                            <span>@azchain</span>
+                        </div>
+                    </FAQ.SocialList>
+                </FAQ.Container>
             </Responsive>
         </Container>
     )

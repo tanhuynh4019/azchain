@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import Button from '@/components/Button'
+import styled, { css } from 'styled-components'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 export const Responsive = styled.div`
     color: #3e3a46;
@@ -9,13 +11,20 @@ export const Title = styled.div`
     line-height: 53px;
     font-weight: 800;
     text-align: center;
+    margin: auto;
+    text-transform: uppercase;
 
     > div {
         width: 70px;
         height: 10px;
         background: #1264ff;
         border-radius: 5px;
-        margin-top: 10px;
+        margin: 10px auto;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 36px;
+        line-height: 38px;
     }
 `
 
@@ -300,5 +309,257 @@ export const About = {
 }
 
 export const Roadmap = {
-    Container: styled.div``
+    Container: styled.div`
+        margin-top: 150px;
+
+        > p {
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 992px) {
+            margin-top: 80px;
+
+            > p {
+                font-size: 16px;
+            }
+        }
+    `,
+    StepContainer: styled.div`
+        margin-top: 90px;
+
+        @media (max-width: 992px) {
+            margin-top: 30px;
+        }
+    `,
+    Step: styled.div`
+        border-top: 1px solid #232531;
+        padding: 16px 0;
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+
+            > div {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                font-size: 36px;
+                font-weight: 700;
+
+                > div {
+                    width: 38px;
+                    height: 15px;
+                    border-radius: 15px;
+                    background: #1264ff;
+                }
+            }
+            > span {
+                font-size: 36px;
+                font-weight: 700;
+                color: #9bb7d6;
+            }
+        }
+        > p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 992px) {
+            > div {
+                > div {
+                    font-size: 24px;
+                    gap: 15px;
+
+                    > div {
+                        height: 10px;
+                    }
+                }
+                > span {
+                    font-size: 24px;
+                }
+            }
+        }
+    `
+}
+
+export const Collection = {
+    Container: styled.div`
+        margin-top: 150px;
+    `,
+    SlideShow: styled(Swiper)`
+        margin-top: 50px;
+        .swiper-slide {
+            transform: scale(0.9);
+            transition: 0.25s;
+            opacity: 0.7;
+        }
+        .swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+        }
+    `,
+    Slide: styled(SwiperSlide)`
+        > img {
+            width: 100%;
+        }
+    `,
+    Button: styled(Button)`
+        margin: 40px auto 20px auto;
+    `,
+    Pagination: styled.div`
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        > button {
+            width: 76px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dadada;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        > button:nth-child(2) {
+            transform: rotate(180deg);
+        }
+    `
+}
+
+export const FAQ = {
+    Container: styled.div`
+        margin-top: 150px;
+        margin-bottom: 100px;
+        background: #e1ecf4;
+        border-radius: 50px;
+        padding: 80px 60px;
+
+        > img {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 992px) {
+            width: calc(100% + 32px);
+            margin-top: 80px;
+            margin-left: -16px;
+            margin-bottom: 40px;
+            border-radius: 0;
+            padding: 40px 16px;
+
+            > img {
+                margin-top: 30px;
+            }
+        }
+    `,
+    Wrapper: styled.div`
+        display: flex;
+        margin: 60px 0;
+
+        > div:nth-child(1) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+
+            > img {
+                width: 100%;
+                max-width: 360px;
+                height: fit-content;
+            }
+        }
+        > div:nth-child(2) {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media (max-width: 992px) {
+            margin: 30px 0;
+
+            > div:nth-child(1) {
+                display: none;
+            }
+        }
+    `,
+    Question: styled.div`
+        background: white;
+        border-radius: 10px;
+        padding: 16px;
+        font-size: 16px;
+        cursor: pointer;
+
+        > p {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-weight: 700;
+        }
+        > div {
+            line-height: 20px;
+            > p {
+                padding-top: 10px;
+            }
+            > p svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        ${({ isCollapse }) =>
+            isCollapse &&
+            css`
+                > p svg {
+                    transform: rotate(180deg);
+                }
+            `}
+
+        @media (max-width: 992px) {
+            padding: 10px;
+            font-size: 12px;
+        }
+    `,
+    SocialList: styled.div`
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+
+            span {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            svg {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            margin-top: 20px;
+
+            > div {
+                gap: 10px;
+
+                span {
+                    font-size: 10px;
+                }
+
+                svg {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    `
 }

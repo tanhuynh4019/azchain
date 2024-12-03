@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
-
-import Container from '@/components/Container'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
+import { useRouter } from 'next/navigation'
 
+import Container from '@/components/Container'
 import {
     AZGPay,
     About,
@@ -17,16 +17,22 @@ import {
     RoadMap,
     Token
 } from './DarkHome.styled'
-import { useGlobalContext } from '@/context/GlobalContext'
 import Button from '@/components/Button'
 import Slider from '@/components/Slider/Index'
 import ArrowCircleIcon from '@/images/ArrowCricleIcon'
 
+import { useGlobalContext } from '@/context/GlobalContext'
+
 const DarkHome = () => {
     const { t, isMobile, language } = useGlobalContext()
+    const router = useRouter()
     const prevButtonRef = useRef(null)
     const nextButtonRef = useRef(null)
     const swiperRef = useRef(null)
+
+    const goToWhitePage = () => {
+        router.push('/nft' + language === 'vi' ? '?lang=vi' : '')
+    }
 
     useEffect(() => {
         if (swiperRef.current) {
@@ -52,9 +58,21 @@ const DarkHome = () => {
                             {t('Secure DeFi Infrastructure')}
                         </Banner.Description>
                         <Banner.ButtonList>
-                            <Button size='lg'>{t('JOIN NOW')}</Button>
-                            <Button size='lg' outline='gradient'>
-                                {t('WHITE PAGE')}
+                            <Button size='lg' onClick={goToWhitePage}>
+                                {t('JOIN NOW')}
+                            </Button>
+                            <Button
+                                size='lg'
+                                outline='gradient'
+                                onClick={() =>
+                                    language === 'en'
+                                        ? (window.location.href =
+                                              'https://docs.en.azchain.app/')
+                                        : (window.location.href =
+                                              'https://docs.vi.azchain.app/')
+                                }
+                            >
+                                {t('WHITEPAPER')}
                             </Button>
                         </Banner.ButtonList>
                     </Banner.Left>
@@ -175,7 +193,7 @@ const DarkHome = () => {
                         </Benefit.BoxText>
                         <Benefit.BoxText>
                             {t(
-                                'Earn daily interest. When storing cryptocurrency at AZChain.'
+                                'Earn daily interest. When storing cryptocurrency at AZChain'
                             )}
                         </Benefit.BoxText>
                     </Benefit.Right>
@@ -268,6 +286,14 @@ const DarkHome = () => {
                         <SwiperSlide>
                             <Ecosystem.SlideItem>
                                 <img
+                                    src={`/images/dark_home/ecosystem-6.png`}
+                                />
+                                <p>{t('WALLET')}</p>
+                            </Ecosystem.SlideItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Ecosystem.SlideItem>
+                                <img
                                     src={`/images/dark_home/ecosystem-1.png`}
                                 />
                                 <p>{t('CARBON')}</p>
@@ -303,6 +329,38 @@ const DarkHome = () => {
                                     src={`/images/dark_home/ecosystem-5.png`}
                                 />
                                 <p>{t('GAMEFI')}</p>
+                            </Ecosystem.SlideItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Ecosystem.SlideItem>
+                                <img
+                                    src={`/images/dark_home/ecosystem-7.png`}
+                                />
+                                <p>{t('AI INSURANCE HUB')}</p>
+                            </Ecosystem.SlideItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Ecosystem.SlideItem>
+                                <img
+                                    src={`/images/dark_home/ecosystem-8.png`}
+                                />
+                                <p>{t('AI TRADING')}</p>
+                            </Ecosystem.SlideItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Ecosystem.SlideItem>
+                                <img
+                                    src={`/images/dark_home/ecosystem-9.png`}
+                                />
+                                <p>{t('LAUNCHPAD')}</p>
+                            </Ecosystem.SlideItem>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Ecosystem.SlideItem>
+                                <img
+                                    src={`/images/dark_home/ecosystem-10.png`}
+                                />
+                                <p>{t('SOCIALFI')}</p>
                             </Ecosystem.SlideItem>
                         </SwiperSlide>
                     </Slider>
@@ -538,7 +596,9 @@ const DarkHome = () => {
                             <img src='/images/dark_home/contract-1.png' />
                         </Contract.Theme>
                         <img src='/images/dark_home/contract-2.png' />
-                        <Button size='lg'>{t('JOIN NOW')}</Button>
+                        <Button size='lg' onClick={goToWhitePage}>
+                            {t('JOIN NOW')}
+                        </Button>
                     </Contract.Banner>
                 </Contract.Container>
             </Container>

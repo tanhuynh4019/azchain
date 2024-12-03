@@ -56,6 +56,10 @@ const translation = {
     'E-commerce': 'THƯƠNG MẠI ĐIỆN TỬ',
     Exchange: 'SÀN GIAO DỊCH',
     'NFT MARKETPLACE': 'SÀN GIAO DỊCH NFT',
+    WALLET: 'Ví',
+    'AI INSURANCE HUB': 'Trung tâm bảo hiểm AI',
+    'AI TRADING': 'Giao dịch AI',
+    LAUNCHPAD: 'Bệ phóng',
     Development: 'Phát triển',
     Research: 'Nghiên cứu',
     'Idea generation': 'Lên ý tưởng',
@@ -117,12 +121,18 @@ const translation = {
     'Xác minh hợp đồng': 'Phát triển thị trường NFT',
     'Ongoing development and expansion of the NFT marketplace.':
         'Phát triển thị trường NFT',
+    'AZCHAIN NFT ROADMAP': 'LỘ TRÌNH NFT AZCHAIN',
     'Follow our roadmap to discover what lies ahead in the AZChain NFT collection.':
-        '',
+        'Hãy theo dõi lộ trình của chúng tôi để xem những gì đang chờ đón trong bộ sưu tập NFT AZChain. ',
     STAGE: 'GIAI ĐOẠN',
+    'We release NFTs for the ownership community, with a limited quantity.':
+        'Chúng tôi phát hành NFT dành cho cộng đồng sở hữu, với số lượng có hạn.',
     'We are releasing a limited edition of Shareholder NFTs, exclusively for angel investors, offering unique rights and attractive benefits.':
         'Chúng tôi phát hành NFT Cổ đông giới hạn, dành cho những nhà đầu tư thiên thần, với những quyền lợi và lợi ích hấp dẫn.',
     FAQs: 'NHỮNG CÂU HỎI THƯỜNG GẶP',
+    'What is AZChain?': 'AZChain là gì?',
+    'AZChain is a specialized blockchain platform designed to enable the tokenization of real-world assets and facilitate transparent financial transactions. Combining advanced technology with the trends of the digital and green economy, AZChain offers secure and efficient solutions in fields such as Carbon Credits, e-commerce, real estate, GameFi, and more.':
+        'AZChain là một nền tảng blockchain chuyên biệt, được thiết kế để cho phép mã hóa tài sản thực và tạo điều kiện cho các giao dịch tài chính minh bạch. Kết hợp công nghệ tiên tiến với xu hướng của nền kinh tế số và kinh tế xanh, AZChain mang đến các giải pháp an toàn và hiệu quả trong các lĩnh vực như tín chỉ carbon, thương mại điện tử, bất động sản, GameFi và nhiều lĩnh vực khác.',
     'What is AZChain NFT?': 'AZChain NFT là gì?',
     'AZChain NFT is a unique digital asset that represents ownership of tokenized real-world assets or access to exclusive features within the AZChain ecosystem.':
         'AZChain NFT là một tài sản số độc đáo, đại diện cho quyền sở hữu tài sản thực được mã hóa hoặc quyền truy cập vào các tính năng độc quyền trong hệ sinh thái AZChain.',

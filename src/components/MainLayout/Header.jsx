@@ -4,6 +4,7 @@ import Container from '../Container'
 import { useGlobalContext } from '@/context/GlobalContext'
 import Button from '../Button'
 import LanguageIcon from '@/images/LanguageIcon'
+import Link from 'next/link'
 
 const HeaderContainer = () => {
     const { t, isMobile, language } = useGlobalContext()
@@ -56,8 +57,13 @@ const HeaderContainer = () => {
                 </Header.Center>
 
                 <Header.Right>
-                    <Button>{t('JOIN NOW')}</Button>
-                    <Header.Language href={language === 'en' ? '/' : '/home'}>
+                    <Link href={`/nft${language === 'vi' ? '?lang=vi' : ''}`}>
+                        <Button>{t('JOIN NOW')}</Button>
+                    </Link>
+
+                    <Header.Language
+                        href={language === 'en' ? '/?lang=vi' : '/'}
+                    >
                         <LanguageIcon />
                         {language}
                     </Header.Language>

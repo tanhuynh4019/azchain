@@ -1,5 +1,5 @@
-import MainLayout from '@/components/MainLayout'
-import DarkHome from '@/screens/DarkHome'
+import WhiteLayout from '@/components/WhiteLayout'
+import WhiteHome from '@/screens/WhiteHome'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -8,7 +8,7 @@ export default function Page() {
     const lang = router.query.lang || 'en'
 
     return (
-        <MainLayout language={lang}>
+        <WhiteLayout language={lang}>
             <Head>
                 <title>
                     {lang === 'en'
@@ -24,7 +24,7 @@ export default function Page() {
                     }
                 />
             </Head>
-            <DarkHome />
-        </MainLayout>
+            <WhiteHome />
+        </WhiteLayout>
     )
 }
